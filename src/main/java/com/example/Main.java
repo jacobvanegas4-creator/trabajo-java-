@@ -2,16 +2,28 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
-        Product p1 = new Product("P123", "Laptop", 1200.0, 50);
-        Product p2 = new Product("P124", "Mouse", 25.0, 100);
+        // Ejercicio 1: Libro
+        Libro l1 = new Libro();
+        l1.mostrarDetalles();
 
-        p1.setPrice(1150.0);
-        p2.setStock(80);
+        Libro l2 = new Libro("Harry Potter", "J.K. Rowling");
+        l2.mostrarDetalles();
 
-        System.out.println("P1 - Nombre: " + p1.getName() + " | Precio: $" + p1.getPrice());
-        System.out.println("P2 - Nombre: " + p2.getName() + " | Stock: " + p2.getStock());
+        Libro l3 = new Libro("El Señor de los Anillos", "J.R.R. Tolkien", 1200);
+        l3.mostrarDetalles();
 
-        System.out.println(p1);
-        System.out.println(p2);
+        System.out.println("-----------------------------------");
+
+        // Ejercicio 2: CuentaBancaria
+        CuentaBancaria cuenta = new CuentaBancaria("Maria", 500);
+        cuenta.depositar(200);
+        System.out.println("Saldo: " + cuenta.getSaldo());
+        cuenta.retirar(1000);
+
+        System.out.println("-----------------------------------");
+
+        // Ejercicio 3: Estudiante
+        Estudiante e = new Estudiante("Pedro", 21, 2.5);
+        e.mostrarInfo();
     }
 }
