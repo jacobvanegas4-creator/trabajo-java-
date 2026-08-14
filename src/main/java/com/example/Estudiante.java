@@ -11,7 +11,7 @@ public class Estudiante {
 
     public Estudiante(String nombre, int edad, double promedio) {
         this.nombre = nombre;
-        setEdad(edad);
+        this.edad = (edad > 0) ? edad : 18;
         this.promedio = promedio;
     }
 

@@ -4,9 +4,13 @@ public class CuentaBancaria {
     private String titular;
     private double saldo;
 
+    public CuentaBancaria() {
+        this("Sin titular", 0.0);
+    }
+
     public CuentaBancaria(String titular, double saldoInicial) {
         this.titular = titular;
-        this.saldo = Math.max(0, saldoInicial);
+        this.saldo = (saldoInicial < 0) ? 0 : saldoInicial;
     }
 
     public String getTitular() { return titular; }
@@ -15,7 +19,9 @@ public class CuentaBancaria {
     public double getSaldo() { return saldo; }
 
     public void depositar(double cantidad) {
-        if (cantidad > 0) this.saldo += cantidad;
+        if (cantidad > 0) {
+            this.saldo += cantidad;
+        }
     }
 
     public void retirar(double cantidad) {

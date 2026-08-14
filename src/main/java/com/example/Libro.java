@@ -19,6 +19,15 @@ public class Libro {
         this.paginas = paginas;
     }
 
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public String getAutor() { return autor; }
+    public void setAutor(String autor) { this.autor = autor; }
+
+    public int getPaginas() { return paginas; }
+    public void setPaginas(int paginas) { this.paginas = paginas; }
+
     public void mostrarDetalles() {
         System.out.println("Libro: " + titulo + " | Autor: " + autor + " | Páginas: " + paginas);
     }
